@@ -1,0 +1,27 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            Orchestrator Example
+        </h3>
+
+        
+        <div slot="footer">
+            <!-- Neutral variant (default) -->
+            <lightning-button label="Back" title="Back" onclick={handleBack} class="slds-m-left_x-small" disabled={show1}></lightning-button>
+            <!-- Base variant: Makes a button look like a link -->
+            <lightning-button variant="brand" label="Next" title="Next" onclick={handleNext} class="slds-m-left_x-small" disabled={show3}></lightning-button>
+        </div>
+        <p class="slds-p-horizontal_small">
+
+            <template if:true={show1}>
+                <c-navigation1></c-navigation1>
+            </template>
+            <template if:true={show2}>
+                <c-navigation2></c-navigation2>
+            </template>
+            <template if:true={show3}>
+                <c-navigation3></c-navigation3>
+            </template>
+        </p>
+    </lightning-card>
+</template>
